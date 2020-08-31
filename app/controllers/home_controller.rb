@@ -1,10 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @title = 'デイトラ'
+    @board = Board.first
   end
 
   def about
-
   end
 
 end
