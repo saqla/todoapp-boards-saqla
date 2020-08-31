@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'hamlit'
+gem 'annotate'
 gem 'better_errors'
 gem 'binding_of_caller'
 
