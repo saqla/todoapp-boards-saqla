@@ -1,0 +1,17 @@
+$base-bg-color: #FFFFFF;
+$text-base-color: #000000;
+
+@mixin fz-26_lh-36 {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+@mixin fz-18_lh-25 {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@mixin fz-14_lh-19 {
+  font-size: 14px;
+  line-height: 19px;
+}

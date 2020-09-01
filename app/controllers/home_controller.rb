@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @board = Board.first
+    @board = Board.all
   end
 
   def about
