@@ -1,0 +1,35 @@
+.container {
+  width: 414px;
+  margin: auto;
+  & .page__ttl {
+    position: absolute;
+    height: 36px;
+    left: 30px;
+    top: 90px;
+    @include fz-26_lh-36;
+  }
+  & .board {
+    position: absolute;
+    width: 362px;
+    height: 161px;
+    left: 30px;
+    top: 161px;
+    background-color: whitesmoke;
+    &__wrapper {
+      &__txt {
+        &__ttl {
+        }
+      }
+      &__dropdown {
+
+      }
+      &__avtImg {
+        .user-avt-img {
+          width: 30px;
+          height: 30px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
