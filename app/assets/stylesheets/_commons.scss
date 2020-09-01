@@ -1,11 +1,16 @@
+@import 'mixin';
+
 .container {
+  position: relative;
   width: 414px;
-  margin: auto;
+  height: 100%;
+  max-height: 1200px;
+  margin: 0 auto;
   & .page__ttl {
     position: absolute;
     height: 36px;
     left: 30px;
-    top: 90px;
+    top: 90px - 58px;
     @include fz-26_lh-36;
   }
   & .board {
@@ -13,7 +18,7 @@
     width: 362px;
     height: 161px;
     left: 30px;
-    top: 161px;
+    top: 161px - 58px;
     background-color: whitesmoke;
     &__wrapper {
       &__txt {

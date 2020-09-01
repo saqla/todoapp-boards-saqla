@@ -1,0 +1,15 @@
+.container
+  %h1.page__ttl
+    All Boards
+  .board
+    -# - boards.each do |board|
+    .board__wrapper
+      .board__wrapper__txt
+        %h2.board__wrapper__txt__ttl
+          Brackets
+        %p.board__wrapper__txt__content
+          Discription
+      .board__wrapper__dropdown
+        = image_tag 'Combined-Shape.png', class: 'cbd-shp'
+      .board__wrapper__avtImg
+        = image_tag 'Oval-male.png', class: 'user-avt-img'
