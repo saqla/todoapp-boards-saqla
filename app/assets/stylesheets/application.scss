@@ -29,3 +29,12 @@ body {
   font-weight: normal;
   @include fz-18_lh-25;
 }
+
+.d-b {
+  display: block;
+}
+
+.d-f {
+  display: flex;
+  flex-wrap: wrap;
+}
