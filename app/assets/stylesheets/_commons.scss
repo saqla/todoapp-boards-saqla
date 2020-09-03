@@ -13,7 +13,7 @@
     top: 90px - 58px;
     @include fz-26_lh-36;
   }
-  & .board {
+  & .cards {
     position: absolute;
     width: 362px;
     left: 30px;
@@ -22,8 +22,6 @@
       width: 362px;
       height: 161px;
       margin-bottom: 26px;
-      display: flex;
-      flex-wrap: wrap;
       &__txt {
         width: 293px;
         height: 50px;
@@ -46,15 +44,21 @@
         margin-top: 39px;
         width: 24px;
         height: 6px;
-        & .cbd-shp {
-        }
       }
-      &__avtImg {
-        .user-avt-img {
-          width: 30px;
-          height: 30px;
-          margin-top: 29px;
-          margin-left: 20px;
+      &__opt {
+        &__avtImg {
+          .user-avt-img {
+            width: 30px;
+            height: 30px;
+            margin-top: 29px;
+            margin-left: 20px;
+          }
+        }
+        &__limit {
+          width: 16px;
+          height: 19px;
+          margin-top: 35px;
+          margin-left: auto;
         }
       }
     }

@@ -1,0 +1,9 @@
+.container
+  .card.cards
+    .card__wrapper.cards__wrapper.d-f
+      %h2.card__wrapper__ttl.page__ttl
+        = @task.title
+      .card__wrapper__dropdown
+        = image_tag 'Combined-Shape.png', class: 'cbd-shp'
+    .card__wrapper__content
+      = @task.content

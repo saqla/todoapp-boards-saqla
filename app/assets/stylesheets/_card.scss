@@ -1,0 +1,15 @@
+@import 'mixin';
+
+.container {
+  & .card {
+    &__wrapper {
+      &__dropdown {
+        height: 36px;
+        & .cbd-shp {
+          width: 24px;
+          height: 6px;
+        }
+      }
+    }
+  }
+}
