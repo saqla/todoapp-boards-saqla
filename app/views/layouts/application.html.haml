@@ -10,9 +10,9 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
 
   %body
-    .header
+    #header.header
       %p.hdr__ttl
         Boards
       = image_tag 'Oval-female.png', class: 'signed-avt-img'
-      
+
     \#{yield}

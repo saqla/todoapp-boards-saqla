@@ -1,16 +1,16 @@
 .container
   %h1.page__ttl
     Tasks
-  .cards
+  .tasks
+    = @board.find[:id]
     - @tasks.each do |task|
-      .cards__wrapper.d-b
-        .cards__wrapper__txt
-          %h2.cards__wrapper__txt__ttl
-            = task.title
-          %p.cards__wrapper__txt__content
-            = task.content
-        .cards__wrapper__opt.d-f
-          .cards__wrapper__opt__avtImg
+      .tasks__wrapper
+        %h2.tasks__wrapper__ttl
+          = task.title
+        %p.tasks__wrapper__content
+          = task.content
+        .tasks__wrapper__opt.d-f
+          .tasks__wrapper__opt__avtImg
             = image_tag 'Oval-male.png', class: 'user-avt-img'
-          .cards__wrapper__opt__limit
+          .tasks__wrapper__opt__limit
             = task.limit

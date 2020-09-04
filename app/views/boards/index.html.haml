@@ -1,16 +1,16 @@
 .container
   %h1.page__ttl
     All Boards
-  .cards
+  .boards
     - @boards.each do |board|
-      .cards__wrapper.d-f
-        .cards__wrapper__txt
-          %h2.cards__wrapper__txt__ttl
+      .boards__wrapper.d-f
+        .boards__wrapper__txt
+          %h2.boards__wrapper__txt__ttl
             = board.title
-          %p.cards__wrapper__txt__content
+          %p.boards__wrapper__txt__content
             = board.content
-        .cards__wrapper__dropdown
+        .boards__wrapper__dropdown
           = image_tag 'Combined-Shape.png', class: 'cbd-shp'
-        .cards__wrapper__opt.d-b
-          .cards__wrapper__opt__avtImg
+        .boards__wrapper__opt
+          .boards__wrapper__opt__avtImg
             = image_tag 'Oval-male.png', class: 'user-avt-img'
