@@ -1,5 +1,14 @@
 $base-bg-color: #FFFFFF;
 $text-base-color: #000000;
+$max-hit-base: 1200px;
+
+@mixin cnt($max-hit-base) {
+  position: relative;
+  width: 414px;
+  height: 100%;
+  max-height: $max-hit-base;
+  margin: 0 auto;
+}
 
 @mixin fz-26_lh-36 {
   font-size: 26px;
@@ -14,11 +23,4 @@ $text-base-color: #000000;
 @mixin fz-14_lh-19 {
   font-size: 14px;
   line-height: 19px;
-}
-
-@mixin name {
-  width: 293px;
-  height: 50px;
-  margin-top: 32px;
-  margin-left: 17px;
 }

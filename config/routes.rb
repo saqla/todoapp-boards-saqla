@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :boards, only: [:index, :create, :edit, :update, :delete]
 
-  resources :tasks, only: [:show]
+  resources :tasks
 end
