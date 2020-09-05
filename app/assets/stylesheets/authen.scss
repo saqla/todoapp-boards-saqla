@@ -1,0 +1,47 @@
+@import 'mixin';
+@import 'buttons';
+
+.container {
+  @include cnt(921px);
+  & .page__ttl {
+    position: absolute;
+    height: 36px;
+    margin-left: 26px;
+    top: 92px - 58px;
+    @include fz-26_lh-36;
+  }
+  & .authen {
+    position: absolute;
+    left: 26px;
+    top: 161px - 58px;
+    & .field {
+      @include fz-18_lh-25;
+      & .lbl-eml {
+        margin-bottom: 4px;
+      }
+      & .eml-fld {
+        @include txt-area;
+        margin-bottom: 33px;
+      }
+      & .lbl-pwd {
+        margin-bottom: 7px;
+      }
+      & .pwd-fld {
+        @include txt-area;
+        margin-bottom: 16px;
+      }
+      & .lbl-pwc {
+        margin-bottom: 9px;
+      }
+      & .pwc-fld {
+        @include txt-area;
+      }
+    }
+    .actions {
+      position: absolute;
+      left: 30px;
+      top: 849px - 58px;
+      margin-bottom: 32px;
+    }
+  }
+}
