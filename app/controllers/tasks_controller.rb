@@ -11,5 +11,4 @@ class TasksController < ApplicationController
     @task = Board.find(params[:id]).tasks.build
   end
 
-
 end

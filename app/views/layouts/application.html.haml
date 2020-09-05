@@ -10,9 +10,12 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
 
   %body
+    %p.notice= notice
+    %p.alert= alert
     #header.header
       %p.hdr__ttl
         Boards
-      = image_tag 'Oval-female.png', class: 'signed-avt-img'
+      - if user_signed_in?
+        = image_tag 'Oval-female.png', class: 'signed-avt-img'
 
     \#{yield}
