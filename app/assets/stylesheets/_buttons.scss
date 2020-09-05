@@ -1,0 +1,15 @@
+@import 'mixin';
+
+.btn {
+  width: 362px;
+  height: 40px;
+  border-radius: 4px;
+  &-primary {
+    background: #F8BD1C;
+  }
+  &-txt {
+    font-weight: 800;
+    @include fz-18_lh-25;
+    color: #FFF;
+  }
+}

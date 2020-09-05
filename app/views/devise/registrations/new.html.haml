@@ -1,21 +1,23 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.container
+  %h1.page__ttl Sign up
+  .authen
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :email, class: 'lbl-eml'
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'eml-fld'
+      .field
+        = f.label :password, class: 'lbl-pwd'
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class: 'pwd-fld'
+      .field
+        = f.label :password_confirmation, class: 'lbl-pwc'
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: 'pwc-fld'
+      .actions
+        = f.submit "Submit", class: 'btn btn-primary btn-txt'
+    -# = render "devise/shared/links"

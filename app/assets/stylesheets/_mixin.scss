@@ -24,3 +24,10 @@ $max-hit-base: 1200px;
   font-size: 14px;
   line-height: 19px;
 }
+
+@mixin txt-area {
+  width: 362px;
+  height: 40px;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+}
