@@ -13,14 +13,14 @@
     top: 17px;
     @include fz-26_lh-36;
   }
-  & .dropdown {
-
+  .hdr_dtl_act {
+    position: absolute;
+    left: 352px;
+    top: 10px;
+    cursor: pointer;
     & .signed-avt-img {
-      position: absolute;
       width: 40px;
       height: 40px;
-      left: 352px;
-      top: 10px;
     }
   }
 }

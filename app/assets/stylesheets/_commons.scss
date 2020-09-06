@@ -1,0 +1,22 @@
+@import 'mixin';
+
+.dropdown {
+  display: inline-block;
+  &-content {
+    position: absolute;
+    right: 0;
+    display: none;
+    min-width: 100px;
+    z-index: 1;
+    & a {
+      text-decoration: none;
+      display: block;
+      background-color: #F4F4F4;
+      @include fz-14_lh-19;
+      text-align: center;
+    }
+  }
+  &:hover .dropdown-content {
+    display: block;
+  }
+}

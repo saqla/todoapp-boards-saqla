@@ -16,8 +16,9 @@
       %p.hdr__ttl
         Boards
       - if user_signed_in?
-        .dropdown
-          = image_tag 'Oval-female.png', class: 'signed-avt-img'
-          .dropdown-content
-            = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
+        .hdr_dtl_act
+          .dropdown
+            = image_tag 'Oval-female.png', class: 'signed-avt-img'
+            .dropdown-content
+              = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
     \#{yield}
