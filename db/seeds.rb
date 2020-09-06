@@ -13,10 +13,21 @@
 #   )
 # end
 
-10.times do
-  Task.create(
+jon = User.create!(email: 'john@example.com', password: 'password')
+emily = User.create!(email: 'emily@example.com', password: 'password')
+
+2.times do
+  jon.boards.create(
     title: Faker::Lorem.sentence(word_count: 5),
-    content: Faker::Lorem.sentence(word_count: 100),
+    content: Faker::Lorem.sentence(word_count: 50),
+    limit: rand(50)
+  )
+end
+
+2.times do
+  emily.boards.create(
+    title: Faker::Lorem.sentence(word_count: 5),
+    content: Faker::Lorem.sentence(word_count: 50),
     limit: rand(50)
   )
 end
