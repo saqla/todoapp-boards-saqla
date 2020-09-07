@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit]
+  before_action :set_board, only: [:show, :edit, :update]
   before_action :authenticate_user!
 
   def index
@@ -25,6 +25,14 @@ class BoardsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @board.update(board_params)
+      redirect_to boards_path
+    else
+      render :edit
+    end
   end
 
   private
