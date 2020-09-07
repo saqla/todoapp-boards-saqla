@@ -9,8 +9,9 @@
     margin-left: 26px;
     top: 92px - 58px;
     @include fz-26_lh-36;
-  }
-  & .authen {
+    }
+  & .authen,
+  & .newBoard {
     position: absolute;
     left: 26px;
     top: 161px - 58px;
@@ -36,10 +37,31 @@
       & .pwc-fld {
         @include txt-area;
       }
+      // new board
+      & .lbl-name {
+        height: 25px;
+        margin-bottom: 8px;
+      }
+      & .txt-name {
+        width: 362px;
+        height: 40px;
+        background-color: #F4F4F4;
+        border-radius: 10px;
+        margin-bottom: 33px;
+      }
+      & .lbl-cont {
+        height: 25px;
+        margin-bottom: 8px;
+      }
+      & .tarea-cont {
+        width: 362px;
+        height: 203px;
+        background-color: #F4F4F4;
+        border-radius: 10px;
+      }
     }
     .actions {
       position: absolute;
-      left: 30px;
       top: 849px - 58px;
       margin-bottom: 32px;
     }

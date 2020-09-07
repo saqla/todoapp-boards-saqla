@@ -4,7 +4,7 @@
 @import 'boards';
 @import 'tasks';
 @import 'card';
-@import 'authen';
+@import 'form';
 @import 'buttons';
 
 html {
@@ -23,6 +23,11 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $text-base-color;
 }
 
 body {

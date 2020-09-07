@@ -1,1 +1,14 @@
-%p new
+.container
+  %h1.page__ttl New Board
+  .newBoard
+    = form_with(model: @board, url: boards_path, method: 'post', local: true) do |f|
+      .field
+        = f.label :title, 'Name', class: 'lbl-name'
+      .field
+        = f.text_field :title, class: 'txt-name'
+      .field
+        = f.label :content, 'Description', class: 'lbl-cont'
+      .field
+        = f.text_area :content, class: 'tarea-cont'
+      .actions
+        = f.submit 'Submit', class: 'btn btn-primary btn-txt'

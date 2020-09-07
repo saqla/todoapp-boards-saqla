@@ -2,8 +2,16 @@
   %h1.page__ttl
     Tasks
   .tasks
-    = @board.find[:board_id]
-    - @tasks.each do |task|
+    -# board引用部
+    %p.tasks__ttl
+      = @board.title
+    %p.tasks__content
+      = @board.content
+    .avtImg
+      = image_tag 'Oval-male.png', class: 'user-avt-img'
+
+    -# tasks一覧
+    -# - @tasks.each do |task|
       .tasks__wrapper
         %h2.tasks__wrapper__ttl
           = task.title

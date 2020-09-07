@@ -1,12 +1,13 @@
 @import 'mixin';
 
-.container {
+.container-task {
   @include cnt($max-hit-base);
   & .page__ttl {
     position: absolute;
     height: 36px;
     margin-left: 30px;
     top: 76px - 58px;
+    font-weight: 800;
     @include fz-26_lh-36;
   }
   & .tasks {
@@ -14,6 +15,17 @@
     width: 362px;
     left: 30px;
     top: 133px - 58px;
+    // board
+    &__ttl {
+      height: 25px;
+      font-weight: 800;
+      margin-bottom: 9px;
+    }
+    &__content {
+      height: 50px;
+      overflow: hidden;
+    }
+
     &__wrapper {
       margin-bottom: 24px;
       background-color: #F4F4F4;
@@ -34,22 +46,15 @@
         @include fz-14_lh-19;
         opacity: .4;
       }
-      &__dropdown {
-        margin-top: 39px;
-        margin-left: 12px;
-        width: 24px;
-        height: 6px;
-      }
-      &__opt {
-        &__avtImg {
-          .user-avt-img {
-            width: 30px;
-            height: 30px;
-            margin-top: 29px;
-            margin-left: 20px;
-          }
-        }
-      }
     }
+  }
+}
+
+.avtImg {
+  height: 30px;
+  margin-top: 36px;
+  .user-avt-img {
+    width: 30px;
+    height: 30px;
   }
 }
