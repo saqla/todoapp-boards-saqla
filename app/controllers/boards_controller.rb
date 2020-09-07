@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show]
+  before_action :set_board, only: [:show, :edit]
   before_action :authenticate_user!
 
   def index
@@ -22,6 +22,9 @@ class BoardsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
   end
 
   private
