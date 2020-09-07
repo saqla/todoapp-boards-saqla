@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @tasks = Board.find(params[:id]).tasks.all
+    @tasks = Board.find(params[:board_id]).tasks.all
   end
 
   def show
@@ -11,4 +13,8 @@ class TasksController < ApplicationController
     @task = Board.find(params[:id]).tasks.build
   end
 
+  private
+  def board_params
+    params.require(:board).permit(:title, :content)
+  end
 end

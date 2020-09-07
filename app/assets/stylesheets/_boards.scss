@@ -15,7 +15,6 @@
     left: 30px;
     top: 161px - 58px;
     &__wrapper {
-      // width: 362px;
       height: 161px;
       margin-bottom: 26px;
       background-color: #F4F4F4;
@@ -53,6 +52,22 @@
             margin-top: 29px;
             margin-left: 20px;
           }
+        }
+      }
+    }
+    & .mk-new {
+      width: 362px;
+      height: 160px;
+      border: 1px dashed rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      & a {
+        text-decoration: none;
+        & p {
+          cursor: pointer;
+          color: #000;
         }
       }
     }
