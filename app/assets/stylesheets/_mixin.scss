@@ -31,3 +31,20 @@ $max-hit-base: 1200px;
   background-color: #F4F4F4;
   border-radius: 10px;
 }
+
+@mixin card-new {
+  width: 362px;
+  height: 160px;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  & a {
+    text-decoration: none;
+    & p {
+      cursor: pointer;
+      color: #000;
+    }
+  }
+}

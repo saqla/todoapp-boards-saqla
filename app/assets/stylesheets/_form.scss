@@ -11,7 +11,8 @@
     @include fz-26_lh-36;
     }
   & .authen,
-  & .newBoard {
+  & .newBoard,
+  & .newTask {
     position: absolute;
     left: 26px;
     top: 161px - 58px;
