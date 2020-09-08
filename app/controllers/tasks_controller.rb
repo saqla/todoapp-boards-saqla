@@ -1,20 +1,32 @@
 class TasksController < ApplicationController
-  before_action :authenticate_user!
-
-  def index
-    @tasks = Board.find(params[:board_id]).tasks.all
-  end
+  before_action :set_board, only: [:show, :edit, :update]
 
   def show
-    @task = Task.find(params[:id])
   end
 
   def new
-    @task = Board.find(params[:id]).tasks.build
+    board = Board.find(params[:board_id])
+    @task = board.tasks.build
   end
 
-  private
-  def board_params
-    params.require(:board).permit(:title, :content)
+  def create
+    board = Board.find(params[:board_id])
+    @task = board.tasks.build(task_params)
+    if @task.save
+      redirect_to board_path(board)
+    else
+      render :new
+    end
   end
+
+
+  private
+  def task_params
+    params.require(:task).permit(:title, :content, :limit, :board_id)
+  end
+
+  def set_board
+    board = Board.find(params[:board_id])
+  end
+
 end

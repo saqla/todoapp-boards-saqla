@@ -3,17 +3,18 @@
     Tasks
   .tasks
     -# board引用部
-    %p.tasks__ttl
-      = @board.title
-    %p.tasks__content
-      = @board.content
-    .avtImg
-      = image_tag 'Oval-male.png', class: 'user-avt-img'
+    .tasks__wrapper-t
+      %p.tasks__wrapper-t__t-ttl
+        = @board.title
+      %p.tasks__wrapper-t__t-content
+        = @board.content
+      .avtImg
+        = image_tag 'Oval-male.png', class: 'user-avt-img'
 
     -# tasks一覧
-    -# - @tasks.each do |task|
+    - @tasks.each do |task|
       .tasks__wrapper
-        %h2.tasks__wrapper__ttl
+        %p.tasks__wrapper__ttl
           = task.title
         %p.tasks__wrapper__content
           = task.content
@@ -22,3 +23,7 @@
             = image_tag 'Oval-male.png', class: 'user-avt-img'
           .tasks__wrapper__opt__limit
             = task.limit
+
+    .mk-new
+      = link_to new_board_task_path(@board) do
+        %p + Add new task
