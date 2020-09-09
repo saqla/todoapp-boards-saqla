@@ -17,7 +17,7 @@
     &__wrapper {
       height: 161px;
       margin-bottom: 26px;
-      background-color: #F4F4F4;
+      background-color: $card-bg-color;
       border-radius: 10px;
       &__txt {
         width: 293px;
@@ -47,8 +47,7 @@
       &__opt {
         &__avtImg {
           .user-avt-img {
-            width: 30px;
-            height: 30px;
+            @include avt-wh;
             margin-top: 29px;
             margin-left: 20px;
           }

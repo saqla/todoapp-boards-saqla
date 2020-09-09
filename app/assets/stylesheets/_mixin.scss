@@ -1,6 +1,7 @@
 $base-bg-color: #FFFFFF;
 $text-base-color: #000000;
 $max-hit-base: 1200px;
+$card-bg-color: #F4F4F4;
 
 @mixin cnt($max-hit-base) {
   position: relative;
@@ -47,4 +48,15 @@ $max-hit-base: 1200px;
       color: #000;
     }
   }
+}
+
+@mixin avt-wrp {
+  margin-top: 36px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin avt-wh {
+  width: 30px;
+  height: 30px;
 }
