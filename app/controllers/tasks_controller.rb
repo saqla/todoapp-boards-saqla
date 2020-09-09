@@ -19,10 +19,9 @@ class TasksController < ApplicationController
     end
   end
 
-
   private
   def task_params
-    params.require(:task).permit(:title, :content, :limit, :board_id)
+    params.require(:task).permit(:title, :content, :limit, :board_id, :eyecatch)
   end
 
   def set_board

@@ -41,19 +41,24 @@
       margin-bottom: 24px;
       background-color: $card-bg-color;
       border-radius: 10px;
-      padding-left: 20px;
+      & .card_image {
+        padding-top: 20px;
+        text-align: center;
+      }
       &__ttl {
         max-width: 293px;
         font-weight: 800;
         overflow: hidden;
         padding-top: 27px;
         margin-bottom: 6px;
+        padding-left: 20px;
       }
       &__content {
         max-width: 293px;
         overflow: hidden;
         @include fz-14_lh-19;
         opacity: .4;
+        padding-left: 20px;
       }
       &__opt {
         width: 362px;
