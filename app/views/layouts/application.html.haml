@@ -14,8 +14,9 @@
     %p.notice= notice
     %p.alert= alert
     #header.header
-      %p.hdr__ttl
-        Boards
+      = link_to root_path do
+        %p.hdr__ttl
+          Boards
       - if user_signed_in?
         .hdr_dtl_act
           .dropdown

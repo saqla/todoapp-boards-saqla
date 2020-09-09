@@ -18,37 +18,59 @@
     // board
     &__wrapper-t {
       padding: 3px;
-      background-color: #F4F4F4;
+      background-color: $card-bg-color;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      padding: 0;
       &__t-ttl {
-        height: 25px;
         font-weight: 800;
-        margin-bottom: 9px;
+        margin-left: 16px;
+        padding-top: 15px;
       }
       &__t-content {
-        height: 50px;
         overflow: hidden;
+        margin-top: 9px;
+        margin-left: 20px;
+      }
+      & .avtImg {
+        @include avt-wrp;
       }
     }
+
     &__wrapper {
       margin-bottom: 24px;
-      background-color: #F4F4F4;
+      background-color: $card-bg-color;
       border-radius: 10px;
+      & .card_image {
+        padding-top: 20px;
+        text-align: center;
+      }
       &__ttl {
-        height: 25px;
         max-width: 293px;
         font-weight: 800;
         overflow: hidden;
-        margin-top: 15px;
-        margin-left: 16px;
+        padding-top: 27px;
         margin-bottom: 6px;
+        padding-left: 20px;
       }
       &__content {
-        height: 19px;
         max-width: 293px;
         overflow: hidden;
-        margin-left: 16px;
         @include fz-14_lh-19;
         opacity: .4;
+        padding-left: 20px;
+      }
+      &__opt {
+        width: 362px;
+        &__avtImg {
+          @include avt-wrp;
+        }
+        &__limit {
+          margin-top: 36px;
+          margin-left: auto;
+          margin-right: 41px;
+          padding-bottom: 20px;
+        }
       }
     }
     // Add card
@@ -58,13 +80,7 @@
   }
 }
 
-.avtImg {
-  height: 30px;
-  margin-top: 36px;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  .user-avt-img {
-    width: 30px;
-    height: 30px;
-  }
+
+.user-avt-img {
+  @include avt-wh;
 }
