@@ -2,6 +2,7 @@
 
 .container-task {
   @include cnt($max-hit-base);
+  // -- Board/show --
   & .page__ttl {
     position: absolute;
     height: 36px;
@@ -36,7 +37,7 @@
         @include avt-wrp;
       }
     }
-
+    // tasks
     &__wrapper {
       margin-bottom: 24px;
       background-color: $card-bg-color;
@@ -44,6 +45,9 @@
       & .card_image {
         padding-top: 20px;
         text-align: center;
+        & .eyecatch {
+        width: 90%;
+        }
       }
       &__ttl {
         max-width: 293px;
@@ -79,7 +83,47 @@
     }
   }
 }
-
+// -- Task/show --
+.container-task-show {
+  @include cnt(951px);
+  & .task {
+    position: absolute;
+    top: 91px - 58px;
+    &__wrapper {
+      width: 362px;
+      margin-left: 24px;
+      & .page__ttl {
+        @include fz-26_lh-36;
+        font-weight: 800;
+      }
+      & .card__dropdown {
+        width: 24px;
+        height: 6px;
+        margin-left: auto;
+      }
+    }
+    & .card_image {
+      text-align: center;
+      margin-top: 32px;
+      & .eyecatch {
+        width: 90%;
+        border-radius: 8px;
+      }
+    }
+    &__content {
+      width: 362px;
+      text-align: center;
+      background-color: $card-bg-color;
+      border-radius: 10px;
+      margin: 35px auto 0;
+      & p {
+        width: 331px;
+        margin: 20px 16px 26px 15px;
+        @include fz-14_lh-19;
+      }
+    }
+  }
+}
 
 .user-avt-img {
   @include avt-wh;

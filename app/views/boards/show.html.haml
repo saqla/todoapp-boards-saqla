@@ -13,19 +13,20 @@
 
     -# tasks一覧
     - @tasks.each do |task|
-      .tasks__wrapper
-        - if task.eyecatch.attached?
-          .card_image
-            = image_tag task.eyecatch, class: 'eyecatch'
-        %p.tasks__wrapper__ttl
-          = task.title
-        %p.tasks__wrapper__content
-          = task.content
-        .tasks__wrapper__opt.d-f
-          .tasks__wrapper__opt__avtImg
-            = image_tag 'Oval-male.png', class: 'user-avt-img'
-          .tasks__wrapper__opt__limit
-            = task.limit
+      = link_to board_task_path(@board, task.id) do
+        .tasks__wrapper
+          - if task.eyecatch.attached?
+            .card_image
+              = image_tag task.eyecatch, class: 'eyecatch'
+          %p.tasks__wrapper__ttl
+            = task.title
+          %p.tasks__wrapper__content
+            = task.content
+          .tasks__wrapper__opt.d-f
+            .tasks__wrapper__opt__avtImg
+              = image_tag 'Oval-male.png', class: 'user-avt-img'
+            .tasks__wrapper__opt__limit
+              = task.limit
 
     .mk-new
       = link_to new_board_task_path(@board) do

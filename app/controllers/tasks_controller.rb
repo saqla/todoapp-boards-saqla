@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update]
+  before_action :set_task, only: [:show]
 
   def show
   end
@@ -24,8 +24,7 @@ class TasksController < ApplicationController
     params.require(:task).permit(:title, :content, :limit, :board_id, :eyecatch)
   end
 
-  def set_board
-    board = Board.find(params[:board_id])
+  def set_task
+    @task = Task.find(params[:id])
   end
-
 end
