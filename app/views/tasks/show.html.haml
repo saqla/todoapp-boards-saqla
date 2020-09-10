@@ -1,9 +1,16 @@
-.container
-  .card.cards
-    .card__wrapper.cards__wrapper.d-f
-      %h2.card__wrapper__ttl.page__ttl
+.container-task-show
+  .task
+    .task__wrapper.d-f
+      %h1.page__ttl
         = @task.title
-      .card__wrapper__dropdown
+      .card__dropdown
         = image_tag 'Combined-Shape.png', class: 'cbd-shp'
-    .card__wrapper__content
-      = @task.content
+    - if @task.eyecatch.attached?
+      .card_image
+        = image_tag @task.eyecatch, class: 'eyecatch'
+    .task__content
+      %p= @task.content
+
+    -# .mk-new
+      = link_to new_board_task_path(@board) do
+        %p + Add new task
