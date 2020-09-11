@@ -2,11 +2,12 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show]
 
   def show
+    @comments = @task.comments
   end
 
   def new
-    board = Board.find(params[:board_id])
-    @task = board.tasks.build
+    @board = Board.find(params[:board_id])
+    @task = @board.tasks.build
   end
 
   def create

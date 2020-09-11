@@ -9,15 +9,16 @@
     margin-left: 26px;
     top: 92px - 58px;
     @include fz-26_lh-36;
+    font-weight: 800;
     }
   & .authen,
   & .newBoard,
-  & .newTask {
+  & .newTask,
+  & .newComment {
     position: absolute;
     left: 26px;
     top: 161px - 58px;
     & .field {
-      @include fz-18_lh-25;
       & .lbl-eml {
         margin-bottom: 4px;
       }
@@ -46,7 +47,7 @@
       & .txt-name {
         width: 362px;
         height: 40px;
-        background-color: #F4F4F4;
+        background-color: $card-bg-color;
         border-radius: 10px;
         margin-bottom: 33px;
       }
@@ -57,7 +58,7 @@
       & .tarea-cont {
         width: 362px;
         height: 203px;
-        background-color: #F4F4F4;
+        background-color: $card-bg-color;
         border-radius: 10px;
       }
     }

@@ -122,6 +122,38 @@
         @include fz-14_lh-19;
       }
     }
+    &__comments {
+      margin-top: 35px;
+      p {
+        @include fz-26_lh-36;
+      }
+      &__detail {
+        margin-top: 25px;
+        &__avtImg {
+          width: 40px;
+          height: 40px;
+          & .user-avt-img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        p {
+          width: 298px;
+          height: 57px;
+          margin-left: 16px;
+          @include fz-14_lh-19
+        }
+      }
+    }
+    & .mk-new {
+      width: 362px;
+      height: 57px;
+      text-align: center;
+      & p {
+        margin-top: 20px;
+        margin-bottom: 18px;
+      }
+    }
   }
 }
 

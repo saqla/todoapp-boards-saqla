@@ -11,6 +11,14 @@
     .task__content
       %p= @task.content
 
-    -# .mk-new
-      = link_to new_board_task_path(@board) do
-        %p + Add new task
+    .task__comments
+      %p Comment
+      - @comments.each do |comment|
+        .task__comments__detail.d-f
+          .task__comments__detail__avtImg
+            = image_tag 'Oval-male.png', class: 'user-avt-img'
+          %p= comment.content
+
+    .mk-new
+      = link_to new_board_task_comment_path(@task, @task.id) do
+        %p + Add new comment
