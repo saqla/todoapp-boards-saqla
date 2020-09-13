@@ -24,16 +24,15 @@
         height: 50px;
         margin-top: 32px;
         margin-left: 17px;
+        text-overflow: ellipsis;
         &__ttl {
           height: 25px;
           max-width: 293px;
-          overflow: hidden;
           margin-bottom: 6px;
         }
         &__content {
           height: 19px;
           max-width: 293px;
-          overflow: hidden;
           @include fz-14_lh-19;
           opacity: .4;
         }

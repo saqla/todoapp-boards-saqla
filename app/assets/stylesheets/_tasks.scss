@@ -29,7 +29,6 @@
         padding-top: 15px;
       }
       &__t-content {
-        overflow: hidden;
         margin-top: 9px;
         margin-left: 20px;
       }
@@ -52,14 +51,12 @@
       &__ttl {
         max-width: 293px;
         font-weight: 800;
-        overflow: hidden;
         padding-top: 27px;
         margin-bottom: 6px;
         padding-left: 20px;
       }
       &__content {
         max-width: 293px;
-        overflow: hidden;
         @include fz-14_lh-19;
         opacity: .4;
         padding-left: 20px;
