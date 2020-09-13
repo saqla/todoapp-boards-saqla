@@ -3,8 +3,11 @@
     .task__wrapper.d-f
       %h1.page__ttl
         = @task.title
-      .card__dropdown
+      .card__dropdown.dropdown
         = image_tag 'Combined-Shape.png', class: 'cbd-shp'
+        .dropdown-content
+          = link_to 'Edit', edit_board_task_path(@task.board_id, @task.id)
+          = link_to 'Delete', board_task_path(@task.board_id, @task.id), data: { method: 'delete' }
     - if @task.eyecatch.attached?
       .card_image
         = image_tag @task.eyecatch, class: 'eyecatch'
@@ -20,5 +23,5 @@
           %p= comment.content
 
     .mk-new
-      = link_to new_board_task_comment_path(@task, @task.id) do
+      = link_to new_board_task_comment_path(@task.board_id, @task.id) do
         %p + Add new comment
