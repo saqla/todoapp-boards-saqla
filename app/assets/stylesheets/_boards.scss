@@ -27,15 +27,15 @@
         &__ttl {
           height: 25px;
           max-width: 293px;
-          overflow: hidden;
           margin-bottom: 6px;
+          @include txt_ellipsis;
         }
         &__content {
           height: 19px;
           max-width: 293px;
-          overflow: hidden;
           @include fz-14_lh-19;
           opacity: .4;
+          @include txt_ellipsis;
         }
       }
       &__dropdown {

@@ -1,0 +1,22 @@
+.container
+  %h1.page__ttl Edit Task
+  .newTask
+    = form_with(model: @task, url: board_task_path(@task.board), method: 'put', local: true) do |f|
+      .field
+        = f.label :eyecatch, 'アイキャッチ'
+      .field
+        = f.file_field :eyecatch
+      .field
+        = f.label :title, 'Name', class: 'lbl-name'
+      .field
+        = f.text_field :title, class: 'txt-name'
+      .field
+        = f.label :content, 'Description', class: 'lbl-cont'
+      .field
+        = f.text_area :content, class: 'tarea-cont'
+      .field
+        = f.label :limit, 'limit', class: 'lbl-limit'
+      .field
+        = f.number_field :limit, class: 'inp-limit'
+      .actions
+        = f.submit 'Submit', class: 'btn btn-primary btn-txt'

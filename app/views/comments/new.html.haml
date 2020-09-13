@@ -1,0 +1,8 @@
+.container
+  %h1.page__ttl New Comments
+  .newComment
+    = form_with(model: [@task, @comment], url: board_task_comments_path(@comment.task), local: true) do |f|
+      .field
+        = f.text_area :content, class: 'tarea-cont'
+      .actions
+        = f.submit 'Submit', class: 'btn btn-primary btn-txt'

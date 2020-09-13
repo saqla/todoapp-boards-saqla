@@ -27,11 +27,12 @@
         font-weight: 800;
         margin-left: 16px;
         padding-top: 15px;
+        @include txt_ellipsis;
       }
       &__t-content {
-        overflow: hidden;
         margin-top: 9px;
         margin-left: 20px;
+        @include txt_ellipsis;
       }
       & .avtImg {
         @include avt-wrp;
@@ -52,17 +53,17 @@
       &__ttl {
         max-width: 293px;
         font-weight: 800;
-        overflow: hidden;
         padding-top: 27px;
         margin-bottom: 6px;
         padding-left: 20px;
+        @include txt_ellipsis;
       }
       &__content {
         max-width: 293px;
-        overflow: hidden;
         @include fz-14_lh-19;
         opacity: .4;
         padding-left: 20px;
+        @include txt_ellipsis;
       }
       &__opt {
         width: 362px;
@@ -97,8 +98,6 @@
         font-weight: 800;
       }
       & .card__dropdown {
-        width: 24px;
-        height: 6px;
         margin-left: auto;
       }
     }
@@ -120,6 +119,39 @@
         width: 331px;
         margin: 20px 16px 26px 15px;
         @include fz-14_lh-19;
+      }
+    }
+    &__comments {
+      margin-top: 35px;
+      p {
+        @include fz-26_lh-36;
+      }
+      &__detail {
+        margin-top: 25px;
+        &__avtImg {
+          width: 40px;
+          height: 40px;
+          & .user-avt-img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        p {
+          width: 298px;
+          height: 57px;
+          margin-left: 16px;
+          @include fz-14_lh-19
+          @include txt_ellipsis;
+        }
+      }
+    }
+    & .mk-new {
+      width: 362px;
+      height: 57px;
+      text-align: center;
+      & p {
+        margin-top: 20px;
+        margin-bottom: 18px;
       }
     }
   }

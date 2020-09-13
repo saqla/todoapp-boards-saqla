@@ -6,14 +6,14 @@
     position: absolute;
     right: 0;
     display: none;
-    min-width: 100px;
+    width: 60px;
     z-index: 1;
     & a {
       text-decoration: none;
       display: block;
       background-color: $card-bg-color;
       @include fz-14_lh-19;
-      text-align: center;
+      text-align: left;
     }
   }
   &:hover .dropdown-content {
