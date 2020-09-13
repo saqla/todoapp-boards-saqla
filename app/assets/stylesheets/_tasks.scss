@@ -27,10 +27,12 @@
         font-weight: 800;
         margin-left: 16px;
         padding-top: 15px;
+        @include txt_ellipsis;
       }
       &__t-content {
         margin-top: 9px;
         margin-left: 20px;
+        @include txt_ellipsis;
       }
       & .avtImg {
         @include avt-wrp;
@@ -54,12 +56,14 @@
         padding-top: 27px;
         margin-bottom: 6px;
         padding-left: 20px;
+        @include txt_ellipsis;
       }
       &__content {
         max-width: 293px;
         @include fz-14_lh-19;
         opacity: .4;
         padding-left: 20px;
+        @include txt_ellipsis;
       }
       &__opt {
         width: 362px;
@@ -137,6 +141,7 @@
           height: 57px;
           margin-left: 16px;
           @include fz-14_lh-19
+          @include txt_ellipsis;
         }
       }
     }
